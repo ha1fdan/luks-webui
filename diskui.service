@@ -1,0 +1,12 @@
+[Unit]
+Description=Disk Unlock Web UI
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sudo /usr/bin/python3 /opt/diskui.py
+WorkingDirectory=/opt
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

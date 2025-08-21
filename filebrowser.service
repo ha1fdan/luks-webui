@@ -1,0 +1,12 @@
+[Unit]
+Description=filebrowser daemon
+After=network.target diskui.service
+
+[Service]
+ExecStart=/opt/filebrowser/filebrowser -a 0.0.0.0 -r /mnt/secure -d /opt/filebrowser/filebrowser.db
+Restart=always
+User=root
+WorkingDirectory=/opt/filebrowser
+
+[Install]
+WantedBy=multi-user.target
